@@ -28,7 +28,10 @@ export class ServiceService {
   }
 
   updatePersona(persona:Persona){
-    console.log(persona.name);
     return this.service.put<Persona>(this.URL+"/"+persona.id,persona);
+  }
+
+  deletePersona(persona:Persona){
+    return this.service.delete<Persona>(this.URL+"/"+persona.id);
   }
 }

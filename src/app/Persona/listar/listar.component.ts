@@ -24,4 +24,11 @@ export class ListarComponent implements OnInit {
     this.router.navigate(["editar"]);
   }
 
+  Eliminar(persona:Persona){
+    this.service.deletePersona(persona)
+    .subscribe(data=>{
+      this.personas=this.personas.filter(p=>p!==persona);
+      alert("Usuario eliminado");
+    })
+  }
 }
