@@ -1,4 +1,10 @@
-# AngularCRUD
+# CRUD Angular
+
+CRUD Personas
+
+## Installation
+
+Install [Node.js](https://nodejs.org/es/download/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
