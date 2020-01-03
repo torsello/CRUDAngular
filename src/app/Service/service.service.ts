@@ -18,4 +18,17 @@ export class ServiceService {
   getPersonas(){
     return this.service.get<Persona[]>(this.URL);
   }
+
+  createPersona(persona:Persona){
+    return this.service.post<Persona>(this.URL, persona);
+  }
+
+  getPersonaId(id:number){
+    return this.service.get<Persona>(this.URL+"/"+id);
+  }
+
+  updatePersona(persona:Persona){
+    console.log(persona.name);
+    return this.service.put<Persona>(this.URL+"/"+persona.id,persona);
+  }
 }
